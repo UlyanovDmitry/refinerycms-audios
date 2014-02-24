@@ -15,7 +15,7 @@ module Refinery
     self.pages_per_admin_index = 10
     self.pages_per_dialog = 7
     self.audio_default_width = 375
-    self.datastore_path = 'system/plugins/audios'
+    self.datastore_path = 'system/refinery/audios'
     #end my-config
 
 
