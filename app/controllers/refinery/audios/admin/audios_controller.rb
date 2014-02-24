@@ -35,14 +35,12 @@ module Refinery
                     Audio.transaction do
                       # дополнительные приготовления и задание оригинального имени по назанчению файла
                       @original_file_name = param_upload_file.original_filename.to_s
-                      new_data_file = Audio.new(:file_name => @original_file_name,:title => params[:audio][:title].to_s, :file_mime_type => file_content_type, :file_size => file_data.length.to_i)
+                      new_data_file = Audio.new(:file_name => @original_file_name,:title => params[:audio][:title].to_s, :file_mime_type => file_content_type, :file_size => file_data.length.to_i, :description => params[:audio][:description].to_s)
                       this_data_file_id = new_data_file.object_id
                       file_url_name = "#{file_prefix}_#{current_time_text}_#{this_data_file_id}.#{file_type}"
                       file_url_path = "#{directory_path}/#{file_url_name}"
                       new_data_file.file_url_name = file_url_name
                       if new_data_file.save
-
-
                         FileUtils.mkdir_p(directory_path) unless File.exists?(directory_path)
                         File.open(file_url_path, 'wb'){|f| f.write(file_data)}
                         flash[:notice] = t 'successfully_finish', scope: 'refinery.audios.admin.audios.upload', file_title: new_data_file.get_title
@@ -117,7 +115,7 @@ module Refinery
         def destroy
           audio_id = params[:id].to_i
           audio = Audio.find(audio_id)
-          directory_path = Refinery::Audio.datastore_root_path
+          directory_path = Refinery::Audios.datastore_root_path
           Audio.transaction do
             audio_title = audio.get_title
             #Audio.destroy
@@ -125,20 +123,11 @@ module Refinery
               file_url_path = "#{directory_path}/#{audio.file_url_name}"
               File.delete file_url_path if File.exist? file_url_path unless audio.file_url_name.blank?
               flash[:notice] = t 'successfully_finish', scope: 'refinery.audios.admin.audios.destroy', file_title: audio_title
-              if from_dialog?
-                @dialog_successful = true
-                render :nothing => true, :layout => true
-              else
-                redirect_to refinery.videos_admin_videos_path and return
-              end
             else
-              @message_error = t 'bd_errors', scope: 'refinery.audios.admin.audios.errors'
+              flash[:error] = t 'bd_errors', scope: 'refinery.audios.admin.audios.errors'
             end
           end
-          unless @message_error.nil?
-            flash[:error] = @message_error
-            redirect_to_index
-          end
+          redirect_to_index
         end
 
 

@@ -1,5 +1,5 @@
 <% if @tab_name == 'insert_preview' %>
-    $('#show_audio').html('<%=j render 'audio_preview', :audio => @audio %>') ;
+    $('#show_audio').html('<%=j render 'audio_preview', :audio => @audio, :include_javascript => true %>') ;
     $('#audio_id').val(<%= @audio.id %>)
     $("span[id^='audio_select']").hide();
     $("span[id^='audio_action']").show();

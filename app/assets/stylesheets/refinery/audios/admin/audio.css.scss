@@ -65,6 +65,10 @@ li.wym_tools_audio{
         margin-top: 0 !important;
       }
     }
+    .audiojs{
+      width: 99%;
+      .scrubber{max-width: 50%;}
+    }
   }
   #audios_list_title, #params_title, #preview_title{
     font-weight: bold;
@@ -104,4 +108,8 @@ li.wym_tools_audio{
     padding: 10px;
   }
   .audio_description{padding: 10px;font-style: italic;}
+}
+
+.select_image img{
+  margin: 8px 5px;
 }

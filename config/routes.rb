@@ -13,6 +13,7 @@ Refinery::Core::Engine.routes.draw do
         collection do
           post :update_positions
           get :insert
+          get :show_audio
           get :audio_to_html
           post :audio_to_html
         end

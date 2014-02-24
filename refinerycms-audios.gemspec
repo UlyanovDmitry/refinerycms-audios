@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.authors           = ['Ulyanov Dmitry']
   s.email             = ['demon@pglu.pro']
   s.name              = 'refinerycms-audios'
-  s.version           = '0.0.1'
+  s.version           = '1.0.0'
   s.description       = 'Manage Audios in RefineryCMS. Use HTML5 Audio.js player.'
   s.date              = '2014-02-15'
   s.summary           = 'Audios extension for Refinery CMS'

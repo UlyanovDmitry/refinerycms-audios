@@ -9,7 +9,7 @@
 
   <div class='field'>
     <%= f.label :title -%>
-    <%= f.text_field :title, :class => 'widest', :require => 'require', :placeholder => t('title', scope: 'activerecord.attributes.refinery/audios/audio') -%>
+    <%= f.text_field :title, :class => 'widest', :required => 'required', :placeholder => t('title', scope: 'activerecord.attributes.refinery/audios/audio') -%>
   </div>
 
   <div class='field'>
@@ -22,7 +22,7 @@
        file_size_limit = Refinery::Audios.max_file_size.to_i
     %>
       <div class="field">
-        <%= f.file_field :file, accept: whitelisted_mime_types.join(','), filesizelimit: file_size_limit, require: 'required' %>
+        <%= f.file_field :file, accept: whitelisted_mime_types.join(','), filesizelimit: file_size_limit, required: 'required' %>
         <%= f.label :file, t('.maximum_file_size', :bytes => number_to_human_size(file_size_limit)) %>
         <%= t('.file_tip', :type_files => whitelisted_mime_types.map{|ftype| "*.#{ftype.split('/').last}"}.uniq.join(', ')) %>
       </div>

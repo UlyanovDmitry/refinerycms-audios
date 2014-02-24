@@ -12,22 +12,23 @@ module Refinery
     end
 
 
-
-    def generate_video_public
-      template "public/video-js.swf", File.join(destination_root, "public", "video-js.swf")
-      directory "public/font", File.join(destination_root, "public", "font")
+    def generate_videojs_loader
+      template "assets/javascripts/audio.js", File.join(destination_root, "app", "assets", "javascripts", "audio.js")
+    end
+    def generate_video_css
+      template "assets/stylesheets/audio-js.css", File.join(destination_root, "app", "assets", "stylesheets", "audio-js.css")
     end
 
 
-    def append_load_seed_data
-      create_file 'db/seeds.rb' unless File.exists?(File.join(destination_root, 'db', 'seeds.rb'))
-      append_file 'db/seeds.rb', :verbose => true do
-        <<-EOH
+    #def append_load_seed_data
+    #  create_file 'db/seeds.rb' unless File.exists?(File.join(destination_root, 'db', 'seeds.rb'))
+    #  append_file 'db/seeds.rb', :verbose => true do
+    #    <<-EOH
+    #        # Added by Refinery CMS Audios extension
+    #        Refinery::Audios::Engine.load_seed
+    #    EOH
+    #  end
+    #end
 
-# Added by Refinery CMS Audios extension
-Refinery::Audios::Engine.load_seed
-        EOH
-      end
-    end
   end
 end
