@@ -3,14 +3,14 @@ module Refinery
     include ActiveSupport::Configurable
 
     config_accessor :datastore_root_path, :whitelisted_mime_types, :max_file_size, :file_prefix, :pages_per_dialog,
-                    :pages_per_admin_index, :datastore_path, :skin_css_class,:audio_default_width
+                    :pages_per_admin_index, :datastore_path, :audio_default_width
 
 
 
     # my config
 
     self.max_file_size = 104857600
-    self.file_prefix = 'video'
+    self.file_prefix = 'audio'
     self.whitelisted_mime_types = %w(audio/mp3)
     self.pages_per_admin_index = 10
     self.pages_per_dialog = 7
