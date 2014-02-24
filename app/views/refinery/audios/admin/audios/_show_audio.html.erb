@@ -6,7 +6,9 @@
 <%= javascript_include_tag 'refinery-audios' if include_javascript  %>
 <% if audio %>
     <!--audio tag began-->
-    <audio id="show_audio_<%= audio.id %>" class="audio-js ajs-default-skin" preload="metadata" src="<%= audio.download_url %>" controls="controls">
+    <audio id="show_audio_<%= audio.id %>" class="audio-js ajs-default-skin" preload="metadata"
+            <%= "width=#{audio_width}" if audio_width > 0 %>
+           src="<%= audio.download_url %>" controls="controls">
     </audio>
     <!--audio tag ended-->
 <% end %>
