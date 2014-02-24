@@ -2,6 +2,14 @@
  * Created by demon on 24.02.14.
  */
 
+function leftPos(elem) {
+    var curleft = 0;
+    if (elem.offsetParent) {
+        do { curleft += elem.offsetLeft; } while (elem = elem.offsetParent);
+    }
+    return curleft;
+};
+
 
 function wrapAllAudio() {
     $('audio').wrapAll(function(){
@@ -77,6 +85,13 @@ function wrapAllAudio() {
         var jquery_div_obj = $(this).parents("div.audiojs");
         jquery_div_obj.find('audio')[0].pause();
     }) ;
+
+    $('.scrubber').click(function(e){
+        var jquery_div_obj = $(this).parents("div.audiojs");
+        var player = jquery_div_obj.find('audio')[0];
+        player.currentTime = player.duration * ((e.clientX - leftPos(this))/this.offsetWidth);
+    })
+
 }
 
 

@@ -3,9 +3,9 @@
   They will automatically be included in application.css.
 */
 
-$video_mp3_image: url("/assets/refinery/admin/Audio_OGG.png");
-$video_ogg_image: url("/assets/refinery/admin/webm.gif");
-$video_wav_image: url("/assets/refinery/admin/video-mp4.png");
+$video_mp3_image: url("/assets/refinery/audios/admin/audio_mp3.png");
+$video_ogg_image: url("/assets/refinery/audios/admin/audio_mp3.png");
+$video_wav_image: url("/assets/refinery/audios/admin/audio_mp3.png");
 
 .audio_mp3, .audio_ogg, .video_wav{
   background: {position: left; size: auto 20px; repeat: no-repeat }
