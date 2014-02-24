@@ -1,0 +1,10 @@
+<% audio ||= nil %>
+<% if audio %>
+<div class="audio_info">
+  <div class="audio_title"><%= audio.get_title %></div>
+  <div class="audio_description"><%= audio.description || t('description_is_null', scope: 'refinery.audios.admin.audios.errors') %></div>
+</div>
+<%= render 'show_audio', audio: audio %>
+<% else %>
+    <%= render 'audio_not_found' %>
+<% end %>

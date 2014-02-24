@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="audios">
+    <% @audios.each do |audio| %>
+      <li>
+        <%= link_to audio.title, refinery.audios_audio_path(audio) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

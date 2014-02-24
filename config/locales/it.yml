@@ -1,0 +1,28 @@
+it:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Aggiungi Nuovo Audio
+            reorder: Riordina Audios
+            reorder_done: Termina il Riordino di Audios
+          records:
+            title: Audios
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Audios. Clicca "Aggiungi Nuovo Audio" per aggiungere il tuo primo audio.
+          audio:
+            view_live_html: Guarda live questo audio <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo audio
+            delete: Rimuovi per sempre questo audio
+      audios:
+        show:
+          other: Altri Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

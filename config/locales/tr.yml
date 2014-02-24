@@ -1,0 +1,28 @@
+tr:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Yeni Ekle Audio
+            reorder: Tekrar sirala Audios
+            reorder_done: Tekrar siralama tamamlandiAudios
+          records:
+            title: Audios
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Audios yok henuz.  Tikla "Yeni Ekle Audio" eklemek senin ilk audio.
+          audio:
+            view_live_html: Bunu canlu audio goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle audio
+            delete: Bunu Sil audio sonsuza dek
+      audios:
+        show:
+          other: Diger Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

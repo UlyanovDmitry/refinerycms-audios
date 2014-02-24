@@ -1,0 +1,7 @@
+<div id="audio_not_found">
+  <% if action_name.to_s == 'insert' %>
+      <div><%= t 'audio_not_selected', scope: 'refinery.audios.admin.audios.audio_to_html' %></div>
+  <% else %>
+      <div><%= t 'audio_not_found', scope: 'refinery.audios.admin.audios.audio_to_html' %></div>
+  <% end %>
+</div>

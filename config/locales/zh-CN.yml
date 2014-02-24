@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: 建立新的 Audio
+            reorder: 对 Audios 重新排序
+            reorder_done: 对 Audios 的重新排序结束
+          records:
+            title: Audios
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Audios yet. Click "Add New Audio" to add your first audio.
+            no_items_yet: 目前没有 Audios . 点击 "Add New Audio" 创建一个audio.
+          audio:
+            view_live_html: 查看 audio 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 audio
+            delete: 永久删除 audio
+      audios:
+        show:
+          other: 其他 Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

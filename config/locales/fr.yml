@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Audio
+            reorder: Réordonner les Audios
+            reorder_done: Fin de réordonnancement des Audios
+          records:
+            title: Audios
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Audio. Cliquer sur "Créer un(e) nouve(au/l/lle) Audio" pour créer votre premi(er/ère) audio.'
+          audio:
+            view_live_html: Voir ce(t/tte) audio <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) audio
+            delete: Supprimer définitivement ce(t/tte) audio
+      audios:
+        show:
+          other: Autres Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

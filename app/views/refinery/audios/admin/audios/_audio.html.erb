@@ -1,0 +1,32 @@
+<li class='clearfix record <%= cycle('on', 'on-hover') %>' id="<%= dom_id(audio) -%>">
+  <span class='title audio_<%= audio.get_file_ext %>'>
+    <%= audio.get_title %>
+    <span class="preview">- <%= number_to_human_size(audio.file_size) %></span>
+  </span>
+  <% if action_name == 'insert' %>
+      <span class='actions' id="audio_action<%= audio.id %>">
+
+        <%= link_to refinery_icon_tag('icon-arrow-right-blue.png'),
+                    refinery.audio_to_html_audios_admin_audios_path(audio_id: audio.id, tab_name: 'insert_preview'),
+                    :title => t('select', scope: 'refinery.audios.admin.audios.insert'),
+                    :remote => true %>
+      </span>
+        <span class="actions" id="audio_select<%= audio.id %>" style="display: none;">
+          <%= refinery_icon_tag('select_video.png') %>
+        </span>
+  <% else %>
+      <span class='actions'>
+
+        <%= link_to refinery_icon_tag('page_white_put.png'), refinery.audios_admin_audio_download_path(audio),
+            :title => t('.download', :size => number_to_human_size(audio.file_size)) %>
+
+        <%= link_to refinery_icon_tag('music.png'), refinery.edit_audios_admin_audio_path(audio),
+             :title => t('.edit') %>
+        <%= link_to refinery_icon_tag('delete.png'), refinery.audios_admin_audio_path(audio),
+            :class => 'cancel confirm-delete',
+            :title => t('.delete'),
+            :confirm => t('message', :scope => 'refinery.admin.delete', :title => audio.title),
+            :method => :delete %>
+      </span>
+  <% end %>
+</li>

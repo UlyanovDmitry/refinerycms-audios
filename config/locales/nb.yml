@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Lag en ny Audio
+            reorder: Endre rekkefølgen på Audios
+            reorder_done: Ferdig å endre rekkefølgen Audios
+          records:
+            title: Audios
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Audios enda. Klikk på "Lag en ny Audio" for å legge til din første audio.
+          audio:
+            view_live_html: Vis hvordan denne audio ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne audio
+            delete: Fjern denne audio permanent
+      audios:
+        show:
+          other: Andre Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

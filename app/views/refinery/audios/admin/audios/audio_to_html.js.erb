@@ -1,0 +1,18 @@
+<% if @tab_name == 'insert_preview' %>
+    $('#show_audio').html('<%=j render 'audio_preview', :audio => @audio %>') ;
+    $('#audio_id').val(<%= @audio.id %>)
+    $("span[id^='audio_select']").hide();
+    $("span[id^='audio_action']").show();
+    $('#audio_action<%= @audio.id %>').hide();
+    $('#audio_select<%= @audio.id %>').show();
+<% elsif @tab_name == 'append_to_wym' %>
+    wym = parent.$.wymeditors(0);
+//alert('<%#=j render 'show_audio', :audio => @audio, :audio_width => @audio_width %>');
+    wym.html(wym.html() + '<%=j render 'show_audio', :audio => @audio, :audio_width => @audio_width %>');
+    wym.update();
+    close_dialog();
+<% else %>
+    alert('<%= t 'page_not_found', scope: 'refinery.audios.admin.audios.audios_to_html' %>');
+<% end %>
+
+

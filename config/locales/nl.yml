@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Nieuwe Audio toevoegen
+            reorder: De volgorde van de Audios wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Audio-volgorde
+          records:
+            title: Audios
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Audios. Druk op 'Nieuwe Audio toevoegen' om de eerste toe te voegen.
+          audio:
+            view_live_html: Deze audio op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze audio
+            delete: Deze audio definitief verwijderen
+      audios:
+        show:
+          other: Andere Audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

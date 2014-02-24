@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Audios::Admin::AudiosController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.audios_admin_audios_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_audios_admin_audio_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Audios::Admin::AudiosController.sortable? && ::Refinery::Audios::Audio.many? %>
+  <li>
+    <%#= link_to t('.reorder', :what => "Audios"),
+                 refinery.audios_admin_audios_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%#= link_to t('.reorder_done', :what => "Audios"),
+                 refinery.audios_admin_audios_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

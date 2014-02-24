@@ -1,0 +1,13 @@
+<% audio ||= nil
+   audio_width ||= 0 #Refinery::Audios.audio_default_width.to_i
+   audio_height ||= 0 #Refinery::Audios.audio_default_height.to_i
+%>
+
+<!--video tag began-->
+<% if audio %>
+    <audio id="show_audio_<%= audio.id %>" class="audio-js ajs-default-skin" controls="controls" preload="true"
+           data-setup="{}" src="<%= audio.download_url %>">
+    </audio>
+<% end %>
+
+<!--video tag ended-->

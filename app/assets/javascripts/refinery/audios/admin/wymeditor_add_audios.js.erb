@@ -1,0 +1,22 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+
+
+if (WYMeditor) {
+    wymeditor_boot_options.toolsItems.push({'name': 'AddAudio', 'title': 'Add_Audio', 'css': 'wym_tools_audio'});
+
+    // locations
+    <% I18n.available_locales.each do |locale_name| %>
+        if (WYMeditor.STRINGS['<%= locale_name %>']) WYMeditor.STRINGS['<%= locale_name %>']['Add_Audio'] = '<%= I18n.t 'link_title', :scope => 'refinery.audios.admin.audios.insert', :locale => locale_name.to_sym %>';
+    <% end %>
+
+
+
+
+    $(document).ready(function() {
+                $('li.wym_tools_audio').unbind().find('a').unbind().attr('href', '<%= Refinery::Core::Engine.routes.url_helpers.insert_audios_admin_audios_path(dialog: true, height: '600') %>');
+                init_modal_dialogs();
+            }
+    )
+
+}

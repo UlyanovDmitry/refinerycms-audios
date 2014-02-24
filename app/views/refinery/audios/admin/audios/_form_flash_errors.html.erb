@@ -1,0 +1,9 @@
+<%
+   hash_errors = {:upload_file_is_null => t('file_is_null', :scope => 'refinery.audios.admin.audios.errors'),
+                  :file_big_size => t('file_big_size_short', :scope => 'refinery.audios.admin.audios.errors', :norm_file_size => number_to_human_size(Refinery::Audios.max_file_size)),}
+%>
+<% hash_errors.each do |key, value| %>
+    <div id='<%= key %>' class="flash flash_error" style='visibility: hidden;display: none; '>
+      <%= value %>
+    </div>
+<% end %>

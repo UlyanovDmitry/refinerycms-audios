@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      audios:
+        title: Audios
+#        article: masculino/femenino
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: Crear nuevo audio
+            reorder: Reordenar audios
+            reorder_done: Reordenación de audios completada
+          records:
+            title: Audios
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay audios todavía. Pulsa en "Crear nuevo Audio" para crear tu primer audio.
+          audio:
+            view_live_html: Ver este audio como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este audio
+            delete: Borrar este audio para siempre
+      audios:
+        show:
+          other: Otros audios
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: Title
+        description: Description

@@ -1,0 +1,107 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+$video_mp3_image: url("/assets/refinery/admin/Audio_OGG.png");
+$video_ogg_image: url("/assets/refinery/admin/webm.gif");
+$video_wav_image: url("/assets/refinery/admin/video-mp4.png");
+
+.audio_mp3, .audio_ogg, .video_wav{
+  background: {position: left; size: auto 20px; repeat: no-repeat }
+  padding-left: 30px !important;
+}
+
+.audio_mp3{background-image: $video_mp3_image !important;}
+.audio_ogg{background-image: $video_ogg_image !important;}
+.video_wav{background-image: $video_wav_image !important;}
+
+.audio_mp3{
+
+}
+
+li.wym_tools_audio{
+  a{background: { image: url("audio_mp3.png"); size: auto 82%};padding-left: 24px !important;}
+}
+
+.divAlert{
+  border: 1px solid red;padding: 3px;font-weight: bold;
+}
+
+
+.insert_audio{ height: inherit;
+  .insert_audio_form{
+    float: left;width: 55%;
+    .search_form{
+      //      .button{position: relative;margin-left: 15px;}
+      .button{top: 2px;}
+      #search{width: 80%;}
+      float: none !important;
+      form{margin-bottom: 0;}
+      margin-bottom: 15px !important;
+    }
+    #records{
+      float: none;
+      width: 100%;
+    }
+  }
+  .insert_audio_preview{
+    float: right;width: 42%;
+    min-height: 480px;
+    height: 100%;
+    padding-left: 10px;
+    border-left: 1px solid gray;
+    #show_audio{
+      min-height: 300px;
+      position: relative;
+      audio{ width: 100%;border: 1px solid transparent;background-color: transparent;
+        position: absolute;bottom: 0px;
+      }
+    }
+    .insert_params{
+      label{font-weight: normal;margin-top: 0;}
+      .field{
+        float: left;padding-right: 15px;
+        margin-top: 0 !important;
+      }
+    }
+  }
+  #audios_list_title, #params_title, #preview_title{
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  //  overflow-y: hidden;
+}
+
+.show_audio{
+  border: 1px solid gray;
+//  background-color: black;
+  position: relative;
+  #audio_not_found{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+
+    border: 5px dashed gray;
+    color: brown;
+    font-weight: bold;
+    text-transform: uppercase;
+    div{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 40%;
+    }
+  }
+}
+.audio_info{
+  .audio_title{
+    font: {weight: bold;size: 1.5em;}
+    padding: 10px;
+  }
+  .audio_description{padding: 10px;font-style: italic;}
+}

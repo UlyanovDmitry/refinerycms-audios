@@ -1,0 +1,68 @@
+ru:
+  refinery:
+    plugins:
+      audios:
+        title: "Аудио"
+    audios:
+      admin:
+        audios:
+          actions:
+            create_new: "Загрузить новый аудио файл"
+            reorder: "Reorder Audios"
+            reorder_done: "Done Reordering Audios"
+          records:
+            title: "Audios"
+            sorry_no_results: "Sorry! There are no results found."
+            no_items_yet: "Список пуст"
+          form:
+            file_tip: "Для полной совместимости, добавтье файлы следующих форматов: %{type_files}"
+            maximum_file_size: "Максимальный размер файла: %{bytes}"
+            add_file: "Загрузить аудио файл"
+          audio:
+            delete: "Ауйдио файл будет удален безвозвратно"
+            download: "Скачать файл (%{size})"
+            message: "Вы уверены, что хотите безвовратно удалить '%{file_name}'?"
+            edit: "Просмотр редактирование свойств"
+          update:
+            successfully_finish: "Аудио файл %{file_title} успешно обновлен"
+          upload:
+            successfully_finish: "Аудио файл %{file_title} успешно загружен"
+          destroy:
+            successfully_finish: "Аудио файл %{file_title} успешно удален"
+          insert:
+            link_title: "Аудио"
+            select: "Выбрать"
+            append_to_wym: "Вставить аудио"
+            cancel_dialog: "Закрыть диалог"
+            audios_list_title: "Список аудио"
+            params_title: "Параметры вставки"
+            preview_title: "Аудио плеер"
+          audio_to_html:
+            label_name: "Аудио"
+            default_name: "Аудио не выбрано"
+            label_width: "Ширина"
+            default_width: "Ширина в px"
+            label_height: "Высота"
+            default_height: "Высота в px"
+            page_not_found: "Неверный запрос"
+            audio_not_found: "Аудио не найдено"
+            audio_not_selected: "Аудио не выбрано"
+          errors:
+            translate_error_text: "Непредвиденная ошибка"
+            search_bd_of_null: "Аудио отсутсвует в базе"
+            search_file_of_null: "Аудио файл не найден"
+            file_type_uncorrect: "Неверный тип файла"
+            file_is_null: "Файл не выбран"
+            file_big_size: "Выбранный файл слишком большой (%{big_file_size}). Допустимый размер файла %{norm_file_size}"
+            file_big_size_short: "Выбранный файл превышает допустимый размер (%{norm_file_size}) !"
+            video_and_flash_unsupported_html: "К сожалению, ваш браузер не поддерживает технологии воспроизведения для этого Аудио. Попробуйте использовать другой браузер, как <a href='%{chrome_link}'>Chrome</a> или загрузите последнюю версию <a href='%{adobe_link}'>Adobe Flash Player</a>."
+            bd_errors: "Ошибка базы данных"
+            description_is_null: "Описание отсутствует"
+      audios:
+        show:
+          other: "Другие аудио файлы"
+  activerecord:
+    attributes:
+      'refinery/audios/audio':
+        title: "Название"
+        description: "Описание"
