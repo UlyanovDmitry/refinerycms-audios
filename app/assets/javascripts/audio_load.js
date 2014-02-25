@@ -94,7 +94,7 @@ function wrapAllAudio() {
     })
 
     $.each($('audio'), function(i, obj){
-        if(obj.preload == 'none') obj.load();
+        if(obj.preload == 'none') {obj.load();obj.preload='auto'; };
     })
 
 }
