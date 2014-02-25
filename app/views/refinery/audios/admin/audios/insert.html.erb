@@ -22,12 +22,12 @@
     </div>
 
     <div class="insert_params">
-      <div id="params_title"><%= t '.params_title' %></div>
+      <!--<div id="params_title"><%#= t '.params_title' %></div>-->
       <%= form_tag(refinery.audio_to_html_audios_admin_audios_path, :remote => true, :id => 'insert_params_form', :as=> 'audio') do |insert_params_form| %>
           <%= hidden_field_tag :tab_name, 'append_to_wym' %>
           <%= hidden_field_tag :audio_id %>
 
-          <div class='field'>
+          <div class='field' style="display: none">
             <%= label_tag :width, t('label_width', scope: 'refinery.audios.admin.audios.audio_to_html') %>
             <%= text_field_tag :width, @default_width, :placeholder => t('default_width', scope: 'refinery.audios.admin.audios.audio_to_html') %>
           </div>

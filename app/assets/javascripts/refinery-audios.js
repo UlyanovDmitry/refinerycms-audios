@@ -12,6 +12,7 @@ if (a.canPlayType && a.canPlayType('audio/mpeg;')){
 
     $(document).ready(function(){
         wrapAllAudio();
+        wymEditoLoadAudioFalse();
     })
 } else {
     // Bad IE, very very bad IE
@@ -21,11 +22,3 @@ if (a.canPlayType && a.canPlayType('audio/mpeg;')){
         });
     }
 }
-
-$(document).ready(function(){
-    if(window.frames['WYMeditor_0']) {
-        $(window.frames['WYMeditor_0'].document).ready(function(){
-            $('audio').attr('preload', 'none')   ;
-        }) }
-})
-

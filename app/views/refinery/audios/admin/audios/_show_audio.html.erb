@@ -7,7 +7,7 @@
 <% if audio %>
     <!--audio tag began-->
     <audio id="show_audio_<%= audio.id %>" class="audio-js ajs-default-skin" preload="metadata"
-            <%= "width=#{audio_width}" if audio_width > 0 %>
+            <%= "width=#{audio_width}" if audio_width.to_i > 0 %>
            src="<%= audio.download_url %>" controls="controls">
     </audio>
     <!--audio tag ended-->

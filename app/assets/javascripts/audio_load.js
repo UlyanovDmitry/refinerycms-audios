@@ -20,15 +20,16 @@ function wrapAllAudio() {
                             <p class="loading"></p> \
                             <p class="error"></p> \
                           </div> \
-                          <div class="scrubber"> \
+                          <span class="scrubber"> \
                             <div class="progress"></div> \
                             <div class="loaded"></div> \
-                          </div> \
+                          </span> \
                           <div class="time"> \
                             <em class="played">00:00</em>/<strong class="duration">00:00</strong> \
                           </div> \
                           <div class="error-message"></div>';
-        return  '<div class="audiojs" classname="audiojs" audio_id ='+ this.id +' id=div'+this.id+'>' + new_control_html+'</div>'
+        var style_width  = this.getAttribute('width') ? ' style=width:'+this.getAttribute('width') : ''
+        return  '<div class="audiojs" classname="audiojs" audio_id ='+ this.id +' id=div'+this.id+style_width+'>' + new_control_html+'</div>'
     })  ;
 
     $('audio').bind('error', function(){
@@ -92,11 +93,28 @@ function wrapAllAudio() {
         player.currentTime = player.duration * ((e.clientX - leftPos(this))/this.offsetWidth);
     })
 
+    $.each($('audio'), function(i, obj){
+        if(obj.preload == 'none') obj.load();
+    })
+
 }
 
 
 if ( (window!=window.top) && ($('.audio-js').length > 0) ) {
     parent.$('.ui-dialog').find('button[title=close]').bind('click', function(){
         parent.$('iframe.ui-dialog-content').remove();
+    })
+}
+
+
+function wymEditoLoadAudioFalse(){
+    $(document).ready(function(){
+        if(window.frames['WYMeditor_0']) {
+            $(window.frames['WYMeditor_0'].document).ready(function(){
+                $.each(window.frames['WYMeditor_0'].document.getElementsByTagName('audio'), function(i, obj){
+                    obj.preload = 'none';
+                })
+            })
+        }
     })
 }

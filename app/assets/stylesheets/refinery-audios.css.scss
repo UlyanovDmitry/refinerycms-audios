@@ -1,5 +1,5 @@
-.audiojs{     width: 870px;
-  min-width: 300px !important; height: 36px; position: relative;
+.audiojs{ width: 375px;
+  min-width: 375px !important; height: 36px; position: relative;
   audio{display: none;position: absolute; top: 155px;left: -1px; }
   .play-pause{
     .play{background: url("player-graphics.gif") -2px -1px no-repeat; z-index: 10000;}
@@ -10,8 +10,8 @@
   .loader{}
   .progress{
   }
-  .scrubber{min-width: 100px;}
-  .time{position: relative; min-width: 110px;float: right;}
+  .scrubber{width: 50%;}
+  .time{position: relative; min-width: 100px;float: right;margin: 0px 0px 0px 3px; padding: 0px 1px 0px 10px;}
 }
 
 // end demon
@@ -32,7 +32,7 @@ background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, 
 .audiojs .loaded { position: absolute; top: 0px; left: 0px; height: 14px; width: 0px; background: #000;
 background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
 background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%); }
-.audiojs .time { height: 36px; line-height: 36px; margin: 0px 0px 0px 6px; padding: 0px 1px 0px 25px; border-left: 1px solid #000; color: #ddd; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); }
+.audiojs .time { height: 36px; line-height: 36px;  border-left: 1px solid #000; color: #ddd; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); }
 .audiojs .time em { padding: 0px 2px 0px 0px; color: #f9f9f9; font-style: normal; }
 .audiojs .time strong { padding: 0px 0px 0px 2px; font-weight: normal; }
 .audiojs .error-message { float: left; display: none; margin: 0px 10px; height: 36px; width: 400px; overflow: hidden; line-height: 36px; white-space: nowrap; color: #fff;

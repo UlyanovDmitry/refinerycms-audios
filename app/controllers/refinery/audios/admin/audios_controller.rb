@@ -201,7 +201,7 @@ module Refinery
         end
 
         def exception_file_not_found(file_name)
-          raise EOFError, "RefineryAudioFile not found: #{file_url_path}"
+          raise EOFError, "RefineryAudioFile not found: #{file_name}"
         end
 
 

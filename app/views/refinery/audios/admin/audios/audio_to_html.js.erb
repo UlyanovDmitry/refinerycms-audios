@@ -10,6 +10,7 @@
 //alert('<%#=j render 'show_audio', :audio => @audio, :audio_width => @audio_width %>');
     wym.html(wym.html() + '<%=j render 'show_audio', :audio => @audio, :audio_width => @audio_width %>');
     wym.update();
+    parent.wymEditoLoadAudioFalse();
     close_dialog();
 <% else %>
     alert('<%= t 'page_not_found', scope: 'refinery.audios.admin.audios.audios_to_html' %>');
